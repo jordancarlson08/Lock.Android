@@ -133,12 +133,12 @@ public class SignUpFormView extends FormView implements TextView.OnEditorActionL
 
     @Nullable
     private String getUsername() {
-        return usernameInput.getVisibility() == VISIBLE ? usernameInput.getText() : null;
+        return usernameInput.getVisibility() == VISIBLE ? usernameInput.getText().trim() : null;
     }
 
     @NonNull
     private String getEmail() {
-        return emailInput.getText();
+        return emailInput.getText().trim();
     }
 
     @NonNull
